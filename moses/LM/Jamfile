@@ -100,6 +100,12 @@ if $(with-nplm) {
   lmmacros += LM_NEURAL ;
 }
 
+#SimpleNeuralLM
+local with-simpleneurallm = [ option.get "with-simpleneurallm" ] ;
+if $(with-simpleneurallm) {
+  obj SimpleNeuralLM.o : SimpleNeuralLM.cpp  :  ;
+}
+
 #OxLM
 local with-oxlm = [ option.get "with-oxlm" ] ;
 if $(with-oxlm) {
